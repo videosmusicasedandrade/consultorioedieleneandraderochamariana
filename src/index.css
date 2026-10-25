@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #222222;
+    --gold: #d4b874;
+    --gold-light: #f3dfa2;
+    --gold-dark: #b89851;
+    --aqua: #64b5a6;
+    --aqua-light: #8ed0c4;
+    --aqua-dark: #468c80;
+    --text-white: #ffffff;
+    --text-muted: #e5e5e5;
+    --text-dim: #9ca3af;
+    --border-dark: #2a2a2a;
+    --border-gold: rgba(212, 184, 116, 0.4);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-muted);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* One-time shimmer when in view */
+@keyframes shimmer-pass {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
+}
+
+.animate-shimmer-once {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer-once::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 184, 116, 0.25),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: shimmer-pass 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+/* Notification flash twice and stop */
+@keyframes flash-twice {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  25% { opacity: 0.3; transform: scale(1.15); }
+  50% { opacity: 1; transform: scale(1); }
+  75% { opacity: 0.3; transform: scale(1.15); }
+}
+
+.animate-flash-twice {
+  animation: flash-twice 1.2s ease-in-out forwards;
+}
+
+/* Custom button styles with smooth transitions */
+.btn-gold {
+  background: linear-gradient(135deg, #d4b874 0%, #b89851 100%);
+  color: #121212;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px -2px rgba(212, 184, 116, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-gold:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(212, 184, 116, 0.45);
+  filter: brightness(1.06);
+}
+
+.btn-gold:active {
+  transform: scale(0.97);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: #d4b874;
+  border: 1px solid rgba(212, 184, 116, 0.6);
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-outline-gold:hover {
+  transform: scale(1.03);
+  background: rgba(212, 184, 116, 0.1);
+  border-color: #d4b874;
+  box-shadow: 0 4px 20px rgba(212, 184, 116, 0.2);
+}
+
+.btn-outline-gold:active {
+  transform: scale(0.97);
+}
+
+.btn-aqua {
+  background: linear-gradient(135deg, #64b5a6 0%, #468c80 100%);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px -2px rgba(100, 181, 166, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-aqua:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(100, 181, 166, 0.5);
+  filter: brightness(1.05);
+}
+
+.btn-aqua:active {
+  transform: scale(0.97);
+}
+
+/* Luxury Card styles */
+.luxury-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 1rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: #d4b874;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(212, 184, 116, 0.18);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4b874;
+}
