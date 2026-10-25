@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({
             {/* Main Headline */}
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[2.9rem] leading-[1.18] font-bold text-[#ffffff] mb-6">
               Você não merece apenas um dentista.{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4b874] via-[#f3dfa2] to-[#d4b874] drop-shadow-sm">
+              <span className="text-[#f3dfa2] font-extrabold drop-shadow-[0_2px_10px_rgba(212,184,116,0.4)]">
                 Você merece sorrir sem medo
               </span>
               , sem esconder, com orgulho do brilho que é seu.
