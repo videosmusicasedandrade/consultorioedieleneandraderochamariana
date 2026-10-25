@@ -139,7 +139,7 @@ export const Procedures: React.FC<ProceduresProps> = ({
         </div>
 
         {/* Procedures Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 lg:gap-8">
           {proceduresData.map((proc) => (
             <div
               key={proc.id}
@@ -214,7 +214,7 @@ export const Procedures: React.FC<ProceduresProps> = ({
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2">
                   <button
                     onClick={() => onSelectProcedure(proc.nome)}
                     className="btn-gold py-2 px-3 text-xs w-full cursor-pointer"

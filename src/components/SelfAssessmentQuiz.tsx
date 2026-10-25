@@ -176,7 +176,7 @@ export const SelfAssessmentQuiz: React.FC<SelfAssessmentQuizProps> = ({
                 2. O que mais te incomoda hoje no seu sorriso?
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3.5">
                 {[
                   { label: 'Cor amarelada ou manchas que não saem', value: 'cor' },
                   { label: 'Formato, tamanho ou desgastes nos dentes', value: 'formato' },
@@ -232,7 +232,7 @@ export const SelfAssessmentQuiz: React.FC<SelfAssessmentQuizProps> = ({
                 3. Qual é o seu maior sonho para o seu sorriso?
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3.5">
                 {[
                   { label: 'Brilhar com dentes brancos e marcantes em fotos', value: 'brilhar' },
                   { label: 'Alinhar com discrição e sem aparelho metálico', value: 'alinhar' },
@@ -313,13 +313,13 @@ export const SelfAssessmentQuiz: React.FC<SelfAssessmentQuizProps> = ({
                   <span className="text-sm font-bold text-[#d4b874]">{result.investment}</span>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3">
                   <button
                     onClick={() => {
                       const summary = `Olá! Fiz a autoavaliação no site e meu resultado indicou ${result.procedure}. Gostaria de conversar com a equipe sobre o meu caso.`;
                       onOpenChatWithDiagnosis(result.procedure, summary);
                     }}
-                    className="btn-gold flex-1 cursor-pointer"
+                    className="btn-gold w-full cursor-pointer"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>Quero Conversar Sobre Meu Caso</span>
@@ -327,7 +327,7 @@ export const SelfAssessmentQuiz: React.FC<SelfAssessmentQuizProps> = ({
 
                   <button
                     onClick={() => onOpenScheduleWithProcedure(result.procedure)}
-                    className="btn-outline-gold flex-1 cursor-pointer"
+                    className="btn-outline-gold w-full cursor-pointer"
                   >
                     <Sparkles className="w-4 h-4" />
                     <span>Agendar Avaliação Clínica</span>

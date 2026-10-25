@@ -114,20 +114,20 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
       <div className="relative w-full max-w-xl bg-[#181818] border border-[#d4b874]/60 rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
         
         {/* Top Header */}
-        <div className="p-5 sm:p-6 bg-[#1f1f1f] border-b border-[#2a2a2a] flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#d4b874]/20 border border-[#d4b874] flex items-center justify-center text-[#d4b874]">
-              <Calendar className="w-5 h-5" />
+        <div className="p-4 sm:p-6 bg-[#1f1f1f] border-b border-[#2a2a2a] flex items-center justify-between">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#d4b874]/20 border border-[#d4b874] flex items-center justify-center text-[#d4b874] shrink-0">
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <h3 className="font-display text-lg font-bold text-[#ffffff]">
+              <h3 className="font-display text-base sm:text-lg font-bold text-[#ffffff] leading-snug">
                 {confirmedBooking ? 'Agendamento Confirmado!' : 'Agendar Avaliação Personalizada'}
               </h3>
-              <p className="text-xs text-[#9ca3af]">
+              <p className="text-[11px] sm:text-xs text-[#9ca3af]">
                 Clínica Edilene Andrade • Mariana - MG • CRO-MG 19135
               </p>
             </div>
@@ -280,7 +280,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
               </div>
 
               {/* Date & Time selection */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-[#d4b874] mb-1.5">
                     2. Escolha a Data *
@@ -328,7 +328,7 @@ export const ScheduleModal: React.FC<ScheduleModalProps> = ({
               </div>
 
               {/* Patient details */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 pt-2">
                 <div>
                   <label className="block text-xs font-medium text-[#e5e5e5] mb-1">
                     Seu Nome Completo *

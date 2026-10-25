@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Calendar, User, ShieldCheck, Sparkles, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, Calendar, User, ShieldCheck, Sparkles, Phone, MessageCircle, MapPin } from 'lucide-react';
 import { db } from '../services/db';
 
 interface HeaderProps {
@@ -87,12 +87,12 @@ export const Header: React.FC<HeaderProps> = ({
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden xl:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
               {navLinks.map((link) => (
                 <button
                   key={link.label}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-xs font-medium text-[#d1d5db] hover:text-[#d4b874] transition-colors cursor-pointer py-1"
+                  className="text-[11px] xl:text-xs font-medium text-[#d1d5db] hover:text-[#d4b874] transition-colors cursor-pointer py-1"
                 >
                   {link.label}
                 </button>
@@ -135,8 +135,8 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             </div>
 
-            {/* Mobile Hamburger Button (Touch target >= 44px) */}
-            <div className="flex xl:hidden items-center gap-2">
+            {/* Mobile/Tablet Hamburger Button (Touch target >= 44px) */}
+            <div className="flex lg:hidden items-center gap-2">
               <button
                 onClick={onOpenSchedule}
                 className="sm:hidden btn-gold py-1.5 px-3 text-[11px] font-bold cursor-pointer"
@@ -251,6 +251,35 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
       )}
+
+      {/* Sleek Mobile Bottom Action Bar (Smartphones only, 1-touch primary actions) */}
+      <div className="fixed bottom-0 left-0 right-0 z-30 sm:hidden bg-[#141414]/95 backdrop-blur-md border-t border-[#262626] px-3 py-2 flex items-center justify-between gap-2 shadow-2xl">
+        <a
+          href="https://wa.me/5531988452121?text=Ol%C3%A1%2C%20Cl%C3%ADnica%20Edilene%20Andrade!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 min-h-[44px] px-2 py-1.5 rounded-xl bg-[#64b5a6]/20 border border-[#64b5a6]/40 text-[#64b5a6] flex items-center justify-center gap-1.5 text-xs font-semibold active:scale-95 transition-all"
+        >
+          <MessageCircle className="w-4 h-4 text-[#64b5a6]" />
+          <span>WhatsApp</span>
+        </a>
+
+        <button
+          onClick={onOpenSchedule}
+          className="flex-[1.4] min-h-[44px] px-3 py-1.5 rounded-xl bg-gradient-to-r from-[#d4b874] to-[#f3dfa2] text-[#121212] flex items-center justify-center gap-1.5 text-xs font-bold active:scale-95 transition-all shadow-md"
+        >
+          <Calendar className="w-4 h-4 text-[#121212]" />
+          <span>Agendar Vaga</span>
+        </button>
+
+        <a
+          href="#localizacao"
+          className="flex-1 min-h-[44px] px-2 py-1.5 rounded-xl bg-[#1e1e1e] border border-[#333] text-[#e5e5e5] flex items-center justify-center gap-1.5 text-xs font-medium active:scale-95 transition-all"
+        >
+          <MapPin className="w-4 h-4 text-[#d4b874]" />
+          <span>Mariana</span>
+        </a>
+      </div>
     </>
   );
 };

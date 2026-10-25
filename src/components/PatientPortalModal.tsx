@@ -33,13 +33,13 @@ export const PatientPortalModal: React.FC<PatientPortalModalProps> = ({
   if (!isOpen || !currentUser) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 bg-black/85 backdrop-blur-md animate-fade-in">
       <div className="relative w-full max-w-2xl bg-[#181818] border border-[#d4b874]/60 rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
         
         {/* Top Header */}
-        <div className="p-5 sm:p-6 bg-[#1f1f1f] border-b border-[#2a2a2a] flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-full bg-[#d4b874]/20 border border-[#d4b874] flex items-center justify-center text-[#d4b874] font-display font-bold text-base">
+        <div className="p-4 sm:p-6 bg-[#1f1f1f] border-b border-[#2a2a2a] flex items-center justify-between">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#d4b874]/20 border border-[#d4b874] flex items-center justify-center text-[#d4b874] font-display font-bold text-sm sm:text-base shrink-0">
               {currentUser.nome.charAt(0)}
             </div>
             <div>

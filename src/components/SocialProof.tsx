@@ -62,10 +62,10 @@ export const SocialProof: React.FC<SocialProofProps> = ({
         </div>
 
         {/* Google Reviews Banner & Photo Slot */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-8 items-center mb-16">
           
           {/* 5-Star Badge Card */}
-          <div className="lg:col-span-5 luxury-card p-6 sm:p-8 bg-gradient-to-br from-[#1a1a1a] to-[#141414] border border-[#d4b874]/30">
+          <div className="col-span-1 md:col-span-5 lg:col-span-5 luxury-card p-6 sm:p-8 bg-gradient-to-br from-[#1a1a1a] to-[#141414] border border-[#d4b874]/30">
             <div className="flex items-center justify-between mb-4">
               <span className="text-xs uppercase tracking-wider text-[#d4b874] font-semibold">
                 Avaliação dos Pacientes
@@ -107,7 +107,7 @@ export const SocialProof: React.FC<SocialProofProps> = ({
           </div>
 
           {/* Photo Slot: Patients smiling / 5 star seal */}
-          <div className="lg:col-span-7">
+          <div className="col-span-1 md:col-span-7 lg:col-span-7">
             <PhotoSlot
               label="fotos de pacientes sorrindo ou selo 5 estrelas"
               tagText="[COLOQUE AQUI: fotos de pacientes sorrindo ou selo 5 estrelas]"
@@ -121,11 +121,13 @@ export const SocialProof: React.FC<SocialProofProps> = ({
         </div>
 
         {/* Testimonials Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="luxury-card p-6 bg-[#181818] flex flex-col justify-between"
+              className={`luxury-card p-6 bg-[#181818] flex flex-col justify-between ${
+                idx === 2 ? 'md:col-span-2 lg:col-span-1' : ''
+              }`}
             >
               <div>
                 <div className="flex text-[#d4b874] gap-1 mb-4">

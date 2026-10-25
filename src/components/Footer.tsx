@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-[#0e0e0e] border-t border-[#222222] text-xs text-[#9ca3af] pt-16 pb-12 relative">
+    <footer className="bg-[#0e0e0e] border-t border-[#222222] text-xs text-[#9ca3af] pt-16 pb-24 sm:pb-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Newsletter Capture Section (Supabase Integrated) */}
@@ -46,10 +46,10 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Subtle golden ambient glow */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#d4b874]/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 md:gap-8 lg:gap-10 items-center">
             
             {/* Newsletter text */}
-            <div className="lg:col-span-6 space-y-2">
+            <div className="col-span-1 md:col-span-12 lg:col-span-6 space-y-2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1e1e1e] border border-[#d4b874]/40 text-[#d4b874] text-xs font-semibold uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5 text-[#d4b874]" />
                 Newsletter da Clínica
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
 
             {/* Newsletter form */}
-            <div className="lg:col-span-6">
+            <div className="col-span-1 md:col-span-12 lg:col-span-6">
               {status.type === 'success' ? (
                 <div className="p-5 rounded-xl bg-[#141414] border border-[#64b5a6] text-center space-y-2 animate-fade-in">
                   <div className="w-10 h-10 rounded-full bg-[#64b5a6]/20 text-[#64b5a6] flex items-center justify-center mx-auto">
@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="space-y-3">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3">
                     <input
                       type="text"
                       placeholder="Seu primeiro nome (opcional)"
@@ -133,10 +133,10 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Footer main columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#1f1f1f]">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 md:gap-8 lg:gap-10 pb-12 border-b border-[#1f1f1f]">
           
           {/* Brand info */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="col-span-1 md:col-span-12 lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-[#d4b874] text-[#121212] flex items-center justify-center font-display font-bold text-lg shadow">
                 EA
@@ -162,7 +162,7 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           {/* Quick links */}
-          <div className="lg:col-span-3 space-y-3">
+          <div className="col-span-1 md:col-span-6 lg:col-span-3 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#d4b874]">
               Navegação Rápida
             </h4>
@@ -201,7 +201,7 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
 
           {/* Contact & Hours */}
-          <div className="lg:col-span-4 space-y-3">
+          <div className="col-span-1 md:col-span-6 lg:col-span-4 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#d4b874]">
               Atendimento em Mariana
             </h4>

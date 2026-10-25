@@ -18,10 +18,18 @@
     --border-gold: rgba(212, 184, 116, 0.4);
   }
 
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     background-color: var(--bg-primary);
     color: var(--text-muted);
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   h1, h2, h3, .font-display {
@@ -87,12 +95,13 @@
   font-weight: 600;
   border-radius: 9999px;
   padding: 0.75rem 1.75rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 18px -2px rgba(212, 184, 116, 0.25);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  user-select: none;
 }
 
 .btn-gold:hover {
@@ -112,11 +121,12 @@
   font-weight: 600;
   border-radius: 9999px;
   padding: 0.75rem 1.75rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  user-select: none;
 }
 
 .btn-outline-gold:hover {
@@ -136,12 +146,13 @@
   font-weight: 600;
   border-radius: 9999px;
   padding: 0.75rem 1.75rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 18px -2px rgba(100, 181, 166, 0.3);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  user-select: none;
 }
 
 .btn-aqua:hover {
@@ -154,6 +165,13 @@
   transform: scale(0.97);
 }
 
+@media (max-width: 640px) {
+  .btn-gold, .btn-outline-gold, .btn-aqua {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.8125rem;
+  }
+}
+
 /* Luxury Card styles */
 .luxury-card {
   background-color: #1a1a1a;
@@ -162,13 +180,24 @@
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.luxury-card:hover {
-  border-color: #d4b874;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px -10px rgba(212, 184, 116, 0.18);
+@media (min-width: 768px) {
+  .luxury-card:hover {
+    border-color: #d4b874;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px -10px rgba(212, 184, 116, 0.18);
+  }
 }
 
-/* Custom scrollbar */
+/* Hide scrollbar for clean horizontal scroll on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar for desktop */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

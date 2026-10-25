@@ -59,29 +59,29 @@ export const VirtualTour: React.FC = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2.5 sm:gap-3 mb-10 max-w-4xl mx-auto">
           {stops.map((stop, idx) => (
             <button
               key={stop.id}
               onClick={() => setActiveTab(idx)}
-              className={`px-4 py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 flex items-center gap-2 cursor-pointer ${
+              className={`px-3 py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-center ${
                 activeTab === idx
                   ? 'bg-[#d4b874] text-[#121212] shadow-lg scale-102'
                   : 'bg-[#1c1c1c] text-[#9ca3af] hover:text-[#ffffff] hover:bg-[#252525] border border-[#2b2b2b]'
               }`}
             >
-              <Eye className="w-3.5 h-3.5" />
-              <span>{stop.title}</span>
+              <Eye className="w-3.5 h-3.5 shrink-0" />
+              <span className="truncate">{stop.title}</span>
             </button>
           ))}
         </div>
 
         {/* Active Stage Display */}
         <div className="luxury-card overflow-hidden bg-[#181818] border border-[#2d2d2d] p-4 sm:p-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 md:gap-8 lg:gap-10 items-center">
             
             {/* Visual Media */}
-            <div className="lg:col-span-7">
+            <div className="col-span-1 md:col-span-7 lg:col-span-7">
               <PhotoSlot
                 label={stops[activeTab].tag}
                 tagText={stops[activeTab].tag}
@@ -93,7 +93,7 @@ export const VirtualTour: React.FC = () => {
             </div>
 
             {/* Description & Feeling */}
-            <div className="lg:col-span-5 flex flex-col justify-center space-y-5">
+            <div className="col-span-1 md:col-span-5 lg:col-span-5 flex flex-col justify-center space-y-5">
               <div>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#64b5a6] block mb-1">
                   Ambiente {activeTab + 1} de 4

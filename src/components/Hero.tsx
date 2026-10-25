@@ -20,10 +20,10 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="absolute -top-10 right-10 w-96 h-96 bg-[#d4b874]/8 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-10 md:gap-8 lg:gap-10 items-center">
           
           {/* Left Column: Psychological Copy & Emotional Invitation */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
+          <div className="col-span-1 md:col-span-7 lg:col-span-7 flex flex-col items-start text-left">
             
             {/* Top pill badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1e1e1e] border border-[#d4b874]/40 mb-6 shadow-sm">
@@ -70,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Micro proof badges */}
-            <div className="pt-6 border-t border-[#262626] w-full grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <div className="pt-6 border-t border-[#262626] w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-full bg-[#1c1c1c] border border-[#d4b874]/30 flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-4 h-4 text-[#d4b874]" />
@@ -91,7 +91,7 @@ export const Hero: React.FC<HeroProps> = ({
                 </div>
               </div>
 
-              <div className="col-span-2 sm:col-span-1 flex items-center gap-2.5">
+              <div className="sm:col-span-2 md:col-span-1 lg:col-span-1 flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-full bg-[#1c1c1c] border border-[#d4b874]/30 flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4 text-[#d4b874]" />
                 </div>
@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* Right Column: Hero Visual Showcase */}
-          <div className="lg:col-span-5 relative">
+          <div className="col-span-1 md:col-span-5 lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Golden corner accents */}
@@ -126,10 +126,10 @@ export const Hero: React.FC<HeroProps> = ({
               {/* Floating diagnostic prompt card */}
               <div
                 onClick={onExploreQuiz}
-                className="absolute -bottom-6 -left-4 sm:-left-8 bg-[#1a1a1a]/95 backdrop-blur-md border border-[#d4b874]/60 rounded-xl p-3.5 shadow-2xl flex items-center gap-3 cursor-pointer hover:scale-105 transition-all duration-300 z-30"
+                className="absolute -bottom-5 left-2 right-2 sm:left-auto sm:-left-8 sm:right-auto bg-[#1a1a1a]/95 backdrop-blur-md border border-[#d4b874]/60 rounded-xl p-3 sm:p-3.5 shadow-2xl flex items-center gap-2.5 sm:gap-3 cursor-pointer hover:scale-105 transition-all duration-300 z-30"
               >
-                <div className="w-10 h-10 rounded-full bg-[#d4b874]/20 border border-[#d4b874] flex items-center justify-center text-[#d4b874] shrink-0">
-                  <Sparkles className="w-5 h-5" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#d4b874]/20 border border-[#d4b874] flex items-center justify-center text-[#d4b874] shrink-0">
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-[#ffffff] flex items-center gap-1">
@@ -138,7 +138,7 @@ export const Hero: React.FC<HeroProps> = ({
                       3 Perguntas
                     </span>
                   </div>
-                  <div className="text-[11px] text-[#d4b874]">
+                  <div className="text-[10px] sm:text-[11px] text-[#d4b874]">
                     Descubra o tratamento ideal para você →
                   </div>
                 </div>

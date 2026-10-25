@@ -126,17 +126,17 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 bg-black/85 backdrop-blur-md animate-fade-in">
       <div className="relative w-full max-w-lg bg-[#181818] border border-[#d4b874]/60 rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
         
         {/* Header with Switcher */}
-        <div className="p-5 sm:p-6 bg-[#1f1f1f] border-b border-[#2a2a2a] flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#d4b874]/20 border border-[#d4b874] flex items-center justify-center text-[#d4b874]">
-              {mode === 'register' ? <UserPlus className="w-5 h-5" /> : <LogIn className="w-5 h-5" />}
+        <div className="p-4 sm:p-6 bg-[#1f1f1f] border-b border-[#2a2a2a] flex items-center justify-between">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#d4b874]/20 border border-[#d4b874] flex items-center justify-center text-[#d4b874] shrink-0">
+              {mode === 'register' ? <UserPlus className="w-4 h-4 sm:w-5 sm:h-5" /> : <LogIn className="w-4 h-4 sm:w-5 sm:h-5" />}
             </div>
             <div>
-              <h3 className="font-display text-lg font-bold text-[#ffffff]">
+              <h3 className="font-display text-base sm:text-lg font-bold text-[#ffffff]">
                 {mode === 'register' ? 'Criar Sua Conta de Paciente' : 'Acessar Área do Paciente'}
               </h3>
               <p className="text-xs text-[#9ca3af]">
@@ -219,7 +219,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-medium text-[#e5e5e5] mb-1">
                     Data de Nascimento *
@@ -248,7 +248,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-medium text-[#e5e5e5] mb-1">
                     Telefone / WhatsApp *

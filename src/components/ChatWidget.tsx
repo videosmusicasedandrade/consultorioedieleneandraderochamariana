@@ -91,8 +91,8 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
 
   return (
     <>
-      {/* Floating Chat Trigger Button (Fixed bottom right) */}
-      <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+      {/* Floating Chat Trigger Button (Fixed bottom right, adjusted for mobile bar) */}
+      <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 flex items-center gap-3">
         {!isOpen && hasNewNotification && (
           <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1e1e1e] border border-[#d4b874]/60 shadow-xl text-xs text-[#d4b874] animate-flash-twice">
             <span className="w-2 h-2 rounded-full bg-[#64b5a6] animate-ping" />
@@ -102,14 +102,14 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative w-14 h-14 rounded-full bg-gradient-to-tr from-[#d4b874] to-[#f3dfa2] text-[#121212] shadow-[0_8px_30px_rgba(212,184,116,0.4)] flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+          className="relative w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-[#d4b874] to-[#f3dfa2] text-[#121212] shadow-[0_8px_30px_rgba(212,184,116,0.45)] flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
           aria-label="Conversar com a Equipe Edilene"
         >
           {isOpen ? (
-            <X className="w-6 h-6 text-[#121212]" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6 text-[#121212]" />
           ) : (
             <>
-              <MessageCircle className="w-6 h-6 text-[#121212]" />
+              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#121212]" />
               {hasNewNotification && (
                 <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-[#64b5a6] rounded-full border-2 border-[#121212] animate-flash-twice" />
               )}
@@ -120,7 +120,7 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-4 sm:right-6 z-50 w-[92vw] sm:w-[380px] h-[520px] max-h-[80vh] bg-[#181818] border border-[#d4b874]/50 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in">
+        <div className="fixed inset-x-2.5 bottom-20 sm:inset-x-auto sm:bottom-24 sm:right-6 z-50 w-auto sm:w-[380px] h-[72vh] sm:h-[520px] max-h-[620px] bg-[#181818] border border-[#d4b874]/50 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in">
           
           {/* Header */}
           <div className="p-4 bg-gradient-to-r from-[#1c1c1c] via-[#221e16] to-[#1c1c1c] border-b border-[#2d2d2d] flex items-center justify-between shrink-0">

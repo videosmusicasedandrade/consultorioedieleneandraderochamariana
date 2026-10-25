@@ -475,7 +475,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onLogou
                 Vouchers de Aniversariantes Resgatados
               </h4>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 {promotions.map((p) => (
                   <div key={p.id} className="p-4 rounded-xl bg-[#181818] border border-[#2a2a2a] text-xs space-y-2">
                     <div className="flex justify-between items-center">
@@ -522,7 +522,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onLogou
                         Sugerido: {q.procedimento_sugerido}
                       </span>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] text-[#9ca3af] bg-[#141414] p-3 rounded-lg">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-2 text-[11px] text-[#9ca3af] bg-[#141414] p-3 rounded-lg">
                       <div>
                         <strong className="text-[#e5e5e5] block">1. Esconde Sorriso:</strong>
                         {q.respostas.escondeSorriso}
@@ -817,7 +817,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ isOpen, onClose, onLogou
                     No painel do seu projeto na Vercel (<strong>Settings &gt; Environment Variables</strong>), adicione as seguintes variáveis obtidas no seu painel do Supabase (<strong>Project Settings &gt; API</strong>):
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 pt-2">
                     <div className="p-3 rounded-xl bg-[#101010] border border-[#2a2a2a] space-y-1">
                       <span className="text-[10px] text-[#9ca3af] uppercase tracking-wider block font-semibold">
                         Variável 1 (URL do Banco)

@@ -114,7 +114,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
         </div>
 
         {/* Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-8">
           {filteredPosts.map((post) => (
             <article
               key={post.id}
@@ -180,11 +180,11 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
 
       {/* Reader Modal for Detailed Article & Commenting */}
       {activeArticle && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 bg-black/85 backdrop-blur-md animate-fade-in">
           <div className="relative w-full max-w-3xl bg-[#181818] border border-[#d4b874]/60 rounded-2xl shadow-2xl max-h-[92vh] flex flex-col overflow-hidden">
             
             {/* Modal Header */}
-            <div className="p-5 sm:p-6 bg-[#1f1f1f] border-b border-[#2a2a2a] flex items-center justify-between shrink-0">
+            <div className="p-4 sm:p-6 bg-[#1f1f1f] border-b border-[#2a2a2a] flex items-center justify-between shrink-0">
               <span className="text-xs font-semibold uppercase tracking-wider text-[#64b5a6] px-2.5 py-1 rounded bg-[#64b5a6]/15">
                 {activeArticle.categoria}
               </span>
@@ -197,7 +197,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
             </div>
 
             {/* Modal Scrollable Content */}
-            <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
+            <div className="p-4 sm:p-8 overflow-y-auto space-y-5 sm:space-y-6">
               
               <div>
                 <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#ffffff] leading-tight mb-3">
@@ -306,7 +306,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
                     Deixe sua pergunta ou relato sobre este tema:
                   </span>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3">
                     <input
                       type="text"
                       placeholder="Seu nome completo"

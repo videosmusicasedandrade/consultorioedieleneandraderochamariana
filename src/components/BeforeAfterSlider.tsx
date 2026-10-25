@@ -61,7 +61,9 @@ export const BeforeAfterSlider: React.FC<BeforeAfterSliderProps> = ({
         onMouseUp={() => setIsDragging(false)}
         onMouseLeave={() => setIsDragging(false)}
         onMouseMove={handleMouseMove}
+        onTouchStart={(e) => handleMove(e.touches[0].clientX)}
         onTouchMove={handleTouchMove}
+        style={{ touchAction: 'none' }}
         className="relative w-full aspect-[16/10] overflow-hidden rounded-xl bg-[#171717] border border-[#2a2a2a] select-none cursor-ew-resize group hover:border-[#d4b874]/50 transition-colors"
       >
         {/* AFTER (Full background) */}

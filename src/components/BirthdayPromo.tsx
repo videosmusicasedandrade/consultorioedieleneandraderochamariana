@@ -85,10 +85,10 @@ export const BirthdayPromo: React.FC<BirthdayPromoProps> = ({
         </div>
 
         {/* Card Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 md:gap-8 lg:gap-10 items-center">
           
           {/* Photo Slot */}
-          <div className="lg:col-span-5">
+          <div className="col-span-1 md:col-span-5 lg:col-span-5">
             <div className="relative">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-[#d4b874]/20 to-[#64b5a6]/20 blur-sm" />
               <div className="relative rounded-2xl overflow-hidden p-2 bg-[#191919] border border-[#2a2a2a]">
@@ -105,7 +105,7 @@ export const BirthdayPromo: React.FC<BirthdayPromoProps> = ({
           </div>
 
           {/* Interactive Benefits & Voucher Box */}
-          <div className="lg:col-span-7">
+          <div className="col-span-1 md:col-span-7 lg:col-span-7">
             <div className="luxury-card p-6 sm:p-8 bg-[#181818] border border-[#2e2e2e]">
               
               <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-[#282828]">

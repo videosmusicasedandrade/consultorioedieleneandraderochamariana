@@ -72,7 +72,7 @@ export const StatsCounter: React.FC = () => {
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-64 bg-[#d4b874]/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
           {stats.map((stat, idx) => (
             <StatCard key={idx} stat={stat} startAnimation={isVisible} />
           ))}
@@ -115,22 +115,22 @@ const StatCard: React.FC<{ stat: StatItem; startAnimation: boolean }> = ({
     stat.target >= 1000 ? count.toLocaleString('pt-BR') : count;
 
   return (
-    <div className="luxury-card p-6 flex flex-col items-center text-center group">
-      <div className="w-14 h-14 rounded-2xl bg-[#1f1f1f] border border-[#2d2d2d] flex items-center justify-center mb-4 group-hover:border-[#d4b874]/50 group-hover:scale-105 transition-all duration-300 shadow-inner">
+    <div className="luxury-card p-3.5 sm:p-6 flex flex-col items-center text-center group">
+      <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#1f1f1f] border border-[#2d2d2d] flex items-center justify-center mb-2.5 sm:mb-4 group-hover:border-[#d4b874]/50 group-hover:scale-105 transition-all duration-300 shadow-inner">
         {stat.icon}
       </div>
 
-      <div className="font-display text-3xl sm:text-4xl font-extrabold text-[#ffffff] tracking-tight mb-1 flex items-center">
+      <div className="font-display text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#ffffff] tracking-tight mb-0.5 sm:mb-1 flex items-center">
         {stat.prefix && <span className="text-[#d4b874] mr-0.5">{stat.prefix}</span>}
         <span>{formattedCount}</span>
         {stat.suffix && <span className="text-[#d4b874] ml-0.5">{stat.suffix}</span>}
       </div>
 
-      <h3 className="text-sm font-semibold text-[#e5e5e5] uppercase tracking-wider mb-2">
+      <h3 className="text-[11px] sm:text-xs font-semibold text-[#e5e5e5] uppercase tracking-wider mb-1 sm:mb-2">
         {stat.label}
       </h3>
 
-      <p className="text-xs text-[#9ca3af] leading-relaxed">
+      <p className="text-[10px] sm:text-xs text-[#9ca3af] leading-relaxed line-clamp-2 sm:line-clamp-none">
         {stat.description}
       </p>
     </div>

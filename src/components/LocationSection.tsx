@@ -26,10 +26,10 @@ export const LocationSection: React.FC = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 md:gap-8 lg:gap-10 items-stretch">
           
           {/* Left Details Card */}
-          <div className="lg:col-span-5 luxury-card p-6 sm:p-8 bg-[#181818] border border-[#2b2b2b] flex flex-col justify-between">
+          <div className="col-span-1 md:col-span-5 lg:col-span-5 luxury-card p-6 sm:p-8 bg-[#181818] border border-[#2b2b2b] flex flex-col justify-between">
             <div className="space-y-6">
               
               <div>
@@ -112,7 +112,7 @@ export const LocationSection: React.FC = () => {
           </div>
 
           {/* Right Interactive Visual Map View */}
-          <div className="lg:col-span-7 luxury-card overflow-hidden bg-[#161616] border border-[#2b2b2b] relative min-h-[380px] flex flex-col">
+          <div className="col-span-1 md:col-span-7 lg:col-span-7 luxury-card overflow-hidden bg-[#161616] border border-[#2b2b2b] relative min-h-[380px] flex flex-col">
             
             {/* Styled Map Canvas Header */}
             <div className="p-4 bg-[#1f1f1f] border-b border-[#282828] flex items-center justify-between text-xs">
@@ -144,7 +144,7 @@ export const LocationSection: React.FC = () => {
                   Rua Frei Durão, 45 • Mariana - MG
                 </p>
 
-                <div className="grid grid-cols-2 gap-2 text-[11px] text-left mb-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2 text-[11px] text-left mb-4">
                   <div className="p-2 rounded bg-[#121212] border border-[#2a2a2a]">
                     <span className="text-[#d4b874] block font-semibold">Distâncias:</span>
                     <span className="text-[#e5e5e5]">A 120m do Jardim</span>

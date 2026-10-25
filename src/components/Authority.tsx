@@ -45,10 +45,10 @@ export const Authority: React.FC<AuthorityProps> = ({ onOpenSchedule }) => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-12 items-center">
           
           {/* Photo Slot Column */}
-          <div className="lg:col-span-5 order-2 lg:order-1">
+          <div className="col-span-1 md:col-span-5 lg:col-span-5 order-2 md:order-1 lg:order-1">
             <div className="relative">
               {/* Outer decorative border */}
               <div className="absolute -inset-2 rounded-2xl bg-gradient-to-r from-[#d4b874]/20 via-[#64b5a6]/20 to-transparent blur-md pointer-events-none" />
@@ -65,7 +65,7 @@ export const Authority: React.FC<AuthorityProps> = ({ onOpenSchedule }) => {
               </div>
 
               {/* Floating Quote Card */}
-              <div className="absolute -bottom-6 -right-4 sm:-right-6 bg-[#1a1a1a] border border-[#d4b874]/60 rounded-xl p-4 shadow-xl max-w-xs">
+              <div className="absolute -bottom-5 right-2 left-2 sm:left-auto sm:-right-6 bg-[#1a1a1a]/95 backdrop-blur-md border border-[#d4b874]/60 rounded-xl p-3.5 sm:p-4 shadow-xl max-w-xs sm:ml-auto">
                 <p className="text-xs italic text-[#e5e5e5] mb-2 leading-relaxed font-serif">
                   "Cada paciente que senta nesta cadeira traz uma história e um sonho. Nosso compromisso é devolver a liberdade de sorrir."
                 </p>
@@ -80,7 +80,7 @@ export const Authority: React.FC<AuthorityProps> = ({ onOpenSchedule }) => {
           </div>
 
           {/* Text & Pillars Column */}
-          <div className="lg:col-span-7 order-1 lg:order-2 flex flex-col justify-center">
+          <div className="col-span-1 md:col-span-7 lg:col-span-7 order-1 md:order-2 lg:order-2 flex flex-col justify-center">
             
             <div className="bg-[#181818] border border-[#262626] rounded-2xl p-6 sm:p-8 mb-8">
               <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -101,7 +101,7 @@ export const Authority: React.FC<AuthorityProps> = ({ onOpenSchedule }) => {
                 Em três décadas no coração de Mariana, a Clínica Edilene Andrade se tornou sinônimo de odontologia que cuida de verdade. Não tratamos apenas dentes: transformamos a autoimagem, o conforto ao mastigar e o brilho nos olhos ao sorrir.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 {credentials.map((item, idx) => (
                   <div
                     key={idx}

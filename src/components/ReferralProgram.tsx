@@ -75,7 +75,7 @@ export const ReferralProgram: React.FC<ReferralProgramProps> = ({ onOpenAuth }) 
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-12">
           
           {/* Card: Quem Indica */}
           <div className="luxury-card p-6 sm:p-8 bg-[#181818] border border-[#2a2a2a] relative overflow-hidden">
@@ -128,10 +128,10 @@ export const ReferralProgram: React.FC<ReferralProgramProps> = ({ onOpenAuth }) 
         </div>
 
         {/* Progress Tracker (If user logged in) & Referral Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-8 items-start">
           
           {/* Progress Tracker */}
-          <div className="lg:col-span-5 luxury-card p-6 sm:p-8 bg-[#1a1a1a]">
+          <div className="col-span-1 md:col-span-5 lg:col-span-5 luxury-card p-6 sm:p-8 bg-[#1a1a1a]">
             <h4 className="font-display text-base font-bold text-[#ffffff] mb-3 flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[#d4b874]" />
               Seu Progresso de Indicações
@@ -198,7 +198,7 @@ export const ReferralProgram: React.FC<ReferralProgramProps> = ({ onOpenAuth }) 
           </div>
 
           {/* Referral Submission Form */}
-          <div className="lg:col-span-7 luxury-card p-6 sm:p-8 bg-[#181818]">
+          <div className="col-span-1 md:col-span-7 lg:col-span-7 luxury-card p-6 sm:p-8 bg-[#181818]">
             <h4 className="font-display text-base font-bold text-[#ffffff] mb-1">
               Indicar um Amigo ou Familiar
             </h4>
@@ -221,7 +221,7 @@ export const ReferralProgram: React.FC<ReferralProgramProps> = ({ onOpenAuth }) 
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-medium text-[#e5e5e5] mb-1">
                     WhatsApp do Indicado *
